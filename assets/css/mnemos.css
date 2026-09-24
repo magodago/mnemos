@@ -203,4 +203,12 @@ background:radial-gradient(ellipse 30% 38% at 50% 26%, rgba(255,222,184,.26), rg
 .obra-info h3{font-size:1.65rem;margin:0 0 7px}
 .obra-info p{color:#5A544D;margin:0 0 12px;font-size:.95rem}
 .disp{display:inline-block;border:1px solid var(--naranja);color:var(--naranja);padding:5px 14px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}
-@media(max-width:900px){.grid-obras{grid-template-columns:1fr;gap:48px}}
+@media(max-width:900px){.grid-obras{grid-template-columns:1fr 1fr;gap:30px 15px}.obra-info{padding-top:13px}.obra-info h3{font-size:1.02rem;margin-bottom:4px}.obra-info p{font-size:.75rem;margin-bottom:8px}.disp{padding:3px 8px;font-size:.57rem;letter-spacing:.1em}}
+
+.mnemo{background:var(--tinta);color:var(--papel);padding:118px 0}
+.mnemo h2{color:var(--papel)}
+.mnemo p{color:rgba(250,248,245,.74);max-width:760px;font-size:1.1rem;line-height:1.85}
+.mnemo .gr{font-family:'Bodoni',serif;font-size:1.45rem;color:var(--naranja);display:block;margin-bottom:18px}
+.libro{display:grid;grid-template-columns:.8fr 1fr;gap:66px;align-items:center}
+.libro img{width:100%;display:block;box-shadow:0 30px 70px rgba(20,18,17,.32)}
+@media(max-width:900px){.libro{grid-template-columns:1fr;gap:34px}.mnemo{padding:78px 0}}
