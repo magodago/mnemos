@@ -161,13 +161,13 @@ footer a:hover{color:var(--naranja)}
 /* ==== SALA DE MUSEO (pagina de obra) ==== */
 .sala{background:var(--tinta);color:var(--papel);position:relative;overflow:hidden;min-height:100vh}
 .sala::before{content:"";position:absolute;left:50%;top:-8%;transform:translateX(-50%);width:130vw;height:120vh;pointer-events:none;
-background:radial-gradient(ellipse 34% 42% at 50% 30%, rgba(255,222,184,.26), rgba(238,94,16,.13) 40%, rgba(20,18,17,0) 74%)}
+background:radial-gradient(ellipse 30% 38% at 50% 26%, rgba(255,222,184,.26), rgba(238,94,16,.13) 40%, rgba(20,18,17,0) 74%)}
 .sala-in{position:relative;z-index:2;padding:150px 0 90px}
 .sala-cab{display:flex;justify-content:space-between;align-items:center;margin-bottom:54px;font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(250,248,245,.55)}
 .sala-cab a{color:rgba(250,248,245,.75);border-bottom:1px solid rgba(250,248,245,.25);padding-bottom:3px}
 .sala-cab a:hover{color:var(--naranja);border-color:var(--naranja)}
 .sala-obra{text-align:center;margin-bottom:76px}
-.sala-obra img{max-height:74vh;width:auto;max-width:100%;box-shadow:0 50px 130px rgba(0,0,0,.72), 0 0 100px rgba(238,94,16,.10)}
+.sala-obra img{margin:0 auto;max-height:74vh;width:auto;max-width:100%;box-shadow:0 50px 130px rgba(0,0,0,.72), 0 0 100px rgba(238,94,16,.10)}
 .sala-pie{display:grid;grid-template-columns:.85fr 1.15fr;gap:76px;align-items:start}
 .cartela{border-top:1px solid rgba(250,248,245,.2);padding-top:26px}
 .cartela h1{font-family:var(--serif);font-size:clamp(2rem,3.4vw,3rem);font-weight:400;line-height:1.08;margin-bottom:6px}
