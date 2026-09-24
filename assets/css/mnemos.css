@@ -178,7 +178,7 @@ background:radial-gradient(ellipse 30% 38% at 50% 26%, rgba(255,222,184,.26), rg
 .cartela .unica{display:inline-block;margin-top:28px;border:1px solid rgba(238,94,16,.6);color:var(--naranja);font-size:.7rem;letter-spacing:.22em;padding:10px 18px;text-transform:uppercase}
 .hist p{font-family:var(--serif);font-size:1.22rem;line-height:1.85;color:rgba(250,248,245,.9);margin-bottom:22px}
 .hist p:first-child::first-letter{font-size:3.1em;float:left;line-height:.84;padding:6px 14px 0 0;color:var(--naranja);font-family:var(--serif)}
-.hist .firma-s{width:210px;margin-top:34px;opacity:.9;filter:invert(1) brightness(1.6)}
+.hist .firma-s{width:200px;margin-top:34px;opacity:.92}
 .compra{display:flex;align-items:center;gap:26px;flex-wrap:wrap;margin-top:44px;padding-top:34px;border-top:1px solid rgba(250,248,245,.16)}
 .compra .precio{font-family:var(--serif);font-size:2.1rem;color:var(--papel)}
 .compra .nota{font-size:.76rem;color:rgba(250,248,245,.5);letter-spacing:.04em}
