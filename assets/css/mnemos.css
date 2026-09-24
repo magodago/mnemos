@@ -29,7 +29,7 @@ h3{font-size:clamp(1.15rem,1.7vw,1.5rem)}
 header.cab{position:fixed;top:0;left:0;right:0;z-index:90;padding:20px 0;transition:all .45s ease;background:rgba(250,248,245,0)}
 header.cab.fijo{background:rgba(250,248,245,.95);backdrop-filter:blur(14px);padding:13px 0;border-bottom:1px solid var(--linea)}
 .cab-in{display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo img{height:34px;width:auto}
+.logo img{height:42px;width:auto}
 .nav{display:flex;gap:34px;align-items:center}
 .nav a{font-size:.83rem;letter-spacing:.02em;color:#3A3530;transition:color .3s}
 .nav a:hover{color:var(--naranja)}
@@ -50,8 +50,9 @@ section.aire{padding:88px 0}
 .linea{height:1px;background:var(--linea);border:0}
 
 /* aparecer */
-.ap{opacity:0;transform:translateY(22px);transition:opacity 1s ease,transform 1s ease}
-.ap.ya{opacity:1;transform:none}
+.ap{transition:opacity .95s ease,transform .95s ease}
+.js .ap{opacity:0;transform:translateY(22px)}
+.js .ap.ya{opacity:1;transform:none}
 
 @media(max-width:900px){
   .wrap{padding:0 20px}
@@ -75,7 +76,7 @@ section.aire{padding:88px 0}
 .precio span{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gris)}
 .unico{display:inline-flex;align-items:center;gap:10px;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--naranja);border:1px solid rgba(238,94,16,.35);padding:9px 16px;border-radius:100px}
 .hero-img{position:relative}
-.hero-img img{width:100%;box-shadow:0 30px 90px rgba(20,18,17,.16)}
+.hero-img img{max-height:78vh;width:auto;margin:0 auto;box-shadow:0 30px 90px rgba(20,18,17,.16)}
 .hero-img .sello{position:absolute;right:-26px;bottom:-26px;width:96px;opacity:.95}
 
 /* ficha de obra */
@@ -129,7 +130,7 @@ section.aire{padding:88px 0}
 /* footer */
 footer{background:var(--tinta);color:rgba(250,248,245,.62);padding:76px 0 40px;font-size:.86rem}
 .foot-in{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:50px;padding-bottom:50px}
-footer .logo-f{height:32px;margin-bottom:20px;opacity:.95}
+footer .logo-f{height:30px;margin-bottom:20px;opacity:.95}
 footer h4{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,248,245,.45);margin-bottom:18px;font-weight:500}
 footer a{display:block;padding:6px 0;transition:color .3s}
 footer a:hover{color:var(--naranja)}
