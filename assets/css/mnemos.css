@@ -157,3 +157,40 @@ footer a:hover{color:var(--naranja)}
   .nav{background:#FAF8F5;justify-content:flex-start;padding:96px 26px 44px;overflow-y:auto;box-shadow:-24px 0 70px rgba(20,18,17,.18)}
   .nav a{color:var(--tinta)}
 }
+
+/* ==== SALA DE MUSEO (pagina de obra) ==== */
+.sala{background:var(--tinta);color:var(--papel);position:relative;overflow:hidden;min-height:100vh}
+.sala::before{content:"";position:absolute;left:50%;top:-8%;transform:translateX(-50%);width:130vw;height:120vh;pointer-events:none;
+background:radial-gradient(ellipse 34% 42% at 50% 30%, rgba(255,222,184,.26), rgba(238,94,16,.13) 40%, rgba(20,18,17,0) 74%)}
+.sala-in{position:relative;z-index:2;padding:150px 0 90px}
+.sala-cab{display:flex;justify-content:space-between;align-items:center;margin-bottom:54px;font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(250,248,245,.55)}
+.sala-cab a{color:rgba(250,248,245,.75);border-bottom:1px solid rgba(250,248,245,.25);padding-bottom:3px}
+.sala-cab a:hover{color:var(--naranja);border-color:var(--naranja)}
+.sala-obra{text-align:center;margin-bottom:76px}
+.sala-obra img{max-height:74vh;width:auto;max-width:100%;box-shadow:0 50px 130px rgba(0,0,0,.72), 0 0 100px rgba(238,94,16,.10)}
+.sala-pie{display:grid;grid-template-columns:.85fr 1.15fr;gap:76px;align-items:start}
+.cartela{border-top:1px solid rgba(250,248,245,.2);padding-top:26px}
+.cartela h1{font-family:var(--serif);font-size:clamp(2rem,3.4vw,3rem);font-weight:400;line-height:1.08;margin-bottom:6px}
+.cartela .anio{font-size:.8rem;letter-spacing:.2em;color:var(--naranja);margin-bottom:26px}
+.cartela dl{margin-top:26px}
+.cartela dt{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,248,245,.45);margin-top:18px}
+.cartela dd{font-size:.98rem;color:rgba(250,248,245,.92);margin-top:4px}
+.cartela .unica{display:inline-block;margin-top:28px;border:1px solid rgba(238,94,16,.6);color:var(--naranja);font-size:.7rem;letter-spacing:.22em;padding:10px 18px;text-transform:uppercase}
+.hist p{font-family:var(--serif);font-size:1.22rem;line-height:1.85;color:rgba(250,248,245,.9);margin-bottom:22px}
+.hist p:first-child::first-letter{font-size:3.1em;float:left;line-height:.84;padding:6px 14px 0 0;color:var(--naranja);font-family:var(--serif)}
+.hist .firma-s{width:210px;margin-top:34px;opacity:.9;filter:invert(1) brightness(1.6)}
+.compra{display:flex;align-items:center;gap:26px;flex-wrap:wrap;margin-top:44px;padding-top:34px;border-top:1px solid rgba(250,248,245,.16)}
+.compra .precio{font-family:var(--serif);font-size:2.1rem;color:var(--papel)}
+.compra .nota{font-size:.76rem;color:rgba(250,248,245,.5);letter-spacing:.04em}
+.btn-oro{background:var(--naranja);border-color:var(--naranja);color:#fff}
+.btn-oro:hover{background:#fff;border-color:#fff;color:var(--tinta)}
+.btn-linea{background:transparent;border-color:rgba(250,248,245,.4);color:var(--papel)}
+.btn-linea:hover{background:var(--papel);color:var(--tinta);border-color:var(--papel)}
+.sello-sala{width:74px;opacity:.9;margin-top:40px}
+@media(max-width:900px){
+  .sala-in{padding:112px 0 70px}
+  .sala-pie{grid-template-columns:1fr;gap:52px}
+  .sala-obra img{max-height:56vh}
+  .hist p{font-size:1.1rem}
+  .compra{gap:16px}
+}
