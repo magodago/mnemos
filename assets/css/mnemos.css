@@ -33,6 +33,8 @@ header.cab.fijo{background:rgba(250,248,245,.95);backdrop-filter:blur(14px);padd
 .nav{display:flex;gap:34px;align-items:center}
 .nav a{font-size:.83rem;letter-spacing:.02em;color:#3A3530;transition:color .3s}
 .nav a:hover{color:var(--naranja)}
+.nav a.btn{color:var(--papel)}
+.nav a.btn:hover{color:var(--papel)}
 .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:.82rem;font-weight:500;letter-spacing:.05em;padding:14px 30px;border:1px solid var(--tinta);background:var(--tinta);color:var(--papel);transition:.35s;cursor:pointer}
 .btn:hover{background:var(--naranja);border-color:var(--naranja)}
 .btn-gh{background:transparent;color:var(--tinta)}
@@ -77,7 +79,7 @@ section.aire{padding:88px 0}
 .unico{display:inline-flex;align-items:center;gap:10px;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--naranja);border:1px solid rgba(238,94,16,.35);padding:9px 16px;border-radius:100px}
 .hero-img{position:relative}
 .hero-img img{max-height:78vh;width:auto;margin:0 auto;box-shadow:0 30px 90px rgba(20,18,17,.16)}
-.hero-img .sello{position:absolute;right:-26px;bottom:-26px;width:96px;opacity:.95}
+.hero-img .sello{position:absolute;right:-16px;bottom:-16px;width:88px;opacity:.95}
 
 /* ficha de obra */
 .obra-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:76px;align-items:start}
