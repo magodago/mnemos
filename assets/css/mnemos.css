@@ -30,7 +30,7 @@ header.cab{position:fixed;top:0;left:0;right:0;z-index:90;padding:20px 0;transit
 header.cab.fijo{background:rgba(250,248,245,.95);backdrop-filter:blur(14px);padding:13px 0;border-bottom:1px solid var(--linea)}
 .cab-in{display:flex;align-items:center;justify-content:space-between;gap:20px}
 .logo img{height:42px;width:auto}
-.nav{display:flex;gap:34px;align-items:center}
+.nav{display:flex;gap:34px;align-items:center;z-index:96}
 .nav a{font-size:.83rem;letter-spacing:.02em;color:#3A3530;transition:color .3s}
 .nav a:hover{color:var(--naranja)}
 .nav a.btn{color:var(--papel)}
@@ -151,3 +151,9 @@ footer a:hover{color:var(--naranja)}
 .foto-artista{align-self:start}
 .foto-artista img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;display:block;filter:contrast(1.02)}
 @media(max-width:900px){.foto-artista{order:-1}}
+
+/* menu movil: fondo solido y arriba del todo */
+@media(max-width:900px){
+  .nav{background:#FAF8F5;justify-content:flex-start;padding:96px 26px 44px;overflow-y:auto;box-shadow:-24px 0 70px rgba(20,18,17,.18)}
+  .nav a{color:var(--tinta)}
+}
