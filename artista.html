@@ -15,8 +15,26 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"VisualArtwork","name":"Espectadores","dateCreated":"2026","artform":"Técnica mixta","artMedium":"Impresión giclée sobre papel mate de archivo, libre de ácido","width":{"@type":"QuantitativeValue","value":40,"unitCode":"CMT"},"height":{"@type":"QuantitativeValue","value":60,"unitCode":"CMT"},"artworkSurface":"Papel mate de archivo","creator":{"@type":"Person","name":"David Ortiz"},"isAccessibleForFree":false,"offers":{"@type":"Offer","price":"250","priceCurrency":"EUR","availability":"https://schema.org/InStock","url":"https://magodago.github.io/mnemos/obras/espectadores.html"}}
 </script>
+<style>
+.cab{background:#FAF8F5;position:static}
+.sec{padding-top:56px}
+</style>
 </head>
 <body>
+<header class="cab" id="cab">
+  <div class="wrap cab-in">
+    <a class="logo" href="index.html"><img src="assets/logo/mnemos-oscuro.png" alt="MNEMOS, museo de arte"></a>
+    <nav class="nav" id="nav">
+      <a href="index.html#exposicion">Future</a>
+      <a href="index.html#artista">El artista</a>
+      <a href="index.html#proceso">El proceso</a>
+      <a href="index.html#libro">El libro</a>
+      <a href="index.html#certificado">Certificado</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+  </div>
+</header>
 
 <main>
 <section class='sec'>
@@ -54,5 +72,16 @@
   </div>
 </footer>
 
+<script>
+var cab=document.getElementById('cab');
+addEventListener('scroll',function(){cab.classList.toggle('fijo',scrollY>40)});
+var b=document.getElementById('burger'),n=document.getElementById('nav');
+b.addEventListener('click',function(){n.classList.toggle('abierto')});
+n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('abierto')})});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('ya');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.ap').forEach(function(e){io.observe(e)});
+/* red de seguridad: lo que ya esta en pantalla se muestra igualmente */
+setTimeout(function(){document.querySelectorAll('.ap').forEach(function(e){var r=e.getBoundingClientRect();if(r.top<innerHeight*0.95&&r.bottom>0){e.classList.add('ya')}})},150);
+</script>
 </body>
 </html>
