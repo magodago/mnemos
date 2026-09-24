@@ -1,0 +1,145 @@
+/* MNEMOS - sistema de diseno */
+@font-face{font-family:'Bodoni';src:url('../fuentes/BodoniModa.ttf') format('truetype');font-weight:400 900;font-display:swap}
+@font-face{font-family:'Inter';src:url('../fuentes/Inter.ttf') format('truetype');font-weight:100 900;font-display:swap}
+
+:root{
+  --tinta:#141211; --papel:#FAF8F5; --papel-2:#F2EEE8;
+  --naranja:#EE5E10; --gris:#6E6862; --linea:#DCD5CB;
+  --serif:'Bodoni','Times New Roman',serif;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --max:1240px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--papel);color:var(--tinta);font-family:var(--sans);font-size:16.5px;line-height:1.72;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
+
+/* tipografia */
+h1,h2,h3,.serif{font-family:var(--serif);font-weight:400;line-height:1.1;letter-spacing:.01em}
+h1{font-size:clamp(2.4rem,5.4vw,4.4rem)}
+h2{font-size:clamp(1.7rem,3.2vw,2.9rem)}
+h3{font-size:clamp(1.15rem,1.7vw,1.5rem)}
+.kicker{font-family:var(--sans);font-size:.7rem;font-weight:500;letter-spacing:.34em;text-transform:uppercase;color:var(--gris)}
+.lead{font-size:1.09rem;color:#3A3530;max-width:60ch}
+.dato{font-family:var(--sans);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gris)}
+
+/* cabecera */
+header.cab{position:fixed;top:0;left:0;right:0;z-index:90;padding:20px 0;transition:all .45s ease;background:rgba(250,248,245,0)}
+header.cab.fijo{background:rgba(250,248,245,.95);backdrop-filter:blur(14px);padding:13px 0;border-bottom:1px solid var(--linea)}
+.cab-in{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo img{height:34px;width:auto}
+.nav{display:flex;gap:34px;align-items:center}
+.nav a{font-size:.83rem;letter-spacing:.02em;color:#3A3530;transition:color .3s}
+.nav a:hover{color:var(--naranja)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:.82rem;font-weight:500;letter-spacing:.05em;padding:14px 30px;border:1px solid var(--tinta);background:var(--tinta);color:var(--papel);transition:.35s;cursor:pointer}
+.btn:hover{background:var(--naranja);border-color:var(--naranja)}
+.btn-gh{background:transparent;color:var(--tinta)}
+.btn-gh:hover{background:var(--tinta);color:var(--papel);border-color:var(--tinta)}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{display:block;width:24px;height:1.5px;background:var(--tinta);margin:5px 0;transition:.3s}
+
+/* secciones */
+section{padding:120px 0}
+section.aire{padding:88px 0}
+.fondo-tinta{background:var(--tinta);color:var(--papel)}
+.fondo-2{background:var(--papel-2)}
+.cab-sec{max-width:760px;margin-bottom:64px}
+.cab-sec h2{margin:14px 0 18px}
+.linea{height:1px;background:var(--linea);border:0}
+
+/* aparecer */
+.ap{opacity:0;transform:translateY(22px);transition:opacity 1s ease,transform 1s ease}
+.ap.ya{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .wrap{padding:0 20px}
+  section{padding:76px 0}
+  .nav{position:fixed;inset:0 0 0 auto;width:82%;max-width:340px;background:var(--papel);flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);transition:.45s ease;box-shadow:-20px 0 60px rgba(0,0,0,.09);z-index:99}
+  .nav.abierto{transform:none}
+  .nav a{font-size:1.05rem;font-family:var(--serif)}
+  .burger{display:block;z-index:100}
+  .burger span{background:var(--tinta)}
+}
+
+/* HERO */
+.hero{padding:170px 0 90px}
+.hero-in{display:grid;grid-template-columns:1fr 1.06fr;gap:70px;align-items:center}
+.hero-txt .kicker{color:var(--naranja)}
+.hero h1{margin:20px 0 0}
+.hero .ficha-linea{margin:22px 0 26px;font-size:.83rem;color:var(--gris);letter-spacing:.03em}
+.hero .pensamiento{font-family:var(--serif);font-size:1.28rem;line-height:1.5;font-style:italic;color:#2C2825;border-left:2px solid var(--naranja);padding-left:22px;margin:30px 0}
+.precio{display:flex;align-items:baseline;gap:14px;margin:34px 0 30px}
+.precio b{font-family:var(--serif);font-size:2.1rem;font-weight:400}
+.precio span{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gris)}
+.unico{display:inline-flex;align-items:center;gap:10px;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--naranja);border:1px solid rgba(238,94,16,.35);padding:9px 16px;border-radius:100px}
+.hero-img{position:relative}
+.hero-img img{width:100%;box-shadow:0 30px 90px rgba(20,18,17,.16)}
+.hero-img .sello{position:absolute;right:-26px;bottom:-26px;width:96px;opacity:.95}
+
+/* ficha de obra */
+.obra-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:76px;align-items:start}
+.obra-img img{width:100%;box-shadow:0 26px 70px rgba(20,18,17,.14)}
+.datos{border-top:1px solid var(--linea);margin-top:34px}
+.datos div{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid var(--linea);font-size:.9rem}
+.datos dt{color:var(--gris);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
+.datos dd{text-align:right;font-weight:500}
+.historia p{margin-bottom:20px}
+.historia p:first-letter{font-family:var(--serif);font-size:3.2rem;float:left;line-height:.82;margin:6px 12px 0 0;color:var(--naranja)}
+
+/* coleccion / newsletter */
+.col-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.aviso-obra{border:1px dashed var(--linea);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:44px 26px;min-height:270px}
+.aviso-obra .simbolo{width:54px;opacity:.5;margin-bottom:18px}
+.news{margin-top:60px;border-top:1px solid var(--linea);padding-top:46px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.form-n{display:flex;gap:0;border:1px solid var(--tinta)}
+.form-n input{flex:1;border:0;padding:15px 18px;font-family:var(--sans);font-size:.9rem;background:transparent;color:var(--tinta)}
+.form-n input:focus{outline:0}
+.form-n button{border:0;background:var(--tinta);color:var(--papel);padding:0 26px;font-family:var(--sans);font-size:.8rem;letter-spacing:.08em;cursor:pointer;transition:.3s}
+.form-n button:hover{background:var(--naranja)}
+
+/* artista */
+.art-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+.art-cita{font-family:var(--serif);font-size:clamp(1.3rem,2.2vw,1.9rem);line-height:1.45;font-style:italic}
+.firma-img{width:230px;margin-top:34px;opacity:.85}
+
+/* proceso */
+.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin-top:20px}
+.paso{border-top:1px solid rgba(250,248,245,.28);padding-top:26px}
+.paso .n{font-family:var(--serif);font-size:.95rem;color:var(--naranja);letter-spacing:.2em}
+.paso h3{margin:14px 0 12px;color:var(--papel)}
+.paso p{color:rgba(250,248,245,.72);font-size:.94rem}
+
+/* certificado */
+.cert{display:grid;grid-template-columns:auto 1fr;gap:64px;align-items:center}
+.cert-sello{width:150px}
+.cert ul{list-style:none;margin-top:26px}
+.cert li{padding:12px 0 12px 32px;position:relative;border-bottom:1px solid var(--linea);font-size:.95rem}
+.cert li:before{content:"";position:absolute;left:0;top:20px;width:14px;height:1.5px;background:var(--naranja)}
+
+/* contacto */
+.cont-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.campos{display:grid;gap:18px;margin-top:30px}
+.campos label{display:block;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gris);margin-bottom:8px}
+.campos input,.campos textarea{width:100%;border:0;border-bottom:1px solid var(--linea);background:transparent;padding:11px 0;font-family:var(--sans);font-size:.98rem;color:var(--tinta)}
+.campos input:focus,.campos textarea:focus{outline:0;border-bottom-color:var(--naranja)}
+.campos textarea{resize:vertical;min-height:110px}
+
+/* footer */
+footer{background:var(--tinta);color:rgba(250,248,245,.62);padding:76px 0 40px;font-size:.86rem}
+.foot-in{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:50px;padding-bottom:50px}
+footer .logo-f{height:32px;margin-bottom:20px;opacity:.95}
+footer h4{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,248,245,.45);margin-bottom:18px;font-weight:500}
+footer a{display:block;padding:6px 0;transition:color .3s}
+footer a:hover{color:var(--naranja)}
+.foot-bajo{border-top:1px solid rgba(250,248,245,.14);padding-top:26px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.78rem}
+
+@media(max-width:980px){
+  .hero{padding:124px 0 60px}
+  .hero-in,.obra-grid,.art-grid,.cert,.cont-grid,.news{grid-template-columns:1fr;gap:44px}
+  .hero-img .sello{display:none}
+  .col-grid,.pasos{grid-template-columns:1fr;gap:26px}
+  .foot-in{grid-template-columns:1fr;gap:34px}
+  .paso{border-top-color:rgba(250,248,245,.2)}
+}
