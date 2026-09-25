@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Espectadores, 2026 · Obra original de David Ortiz | MNEMOS</title>
-<meta name="description" content="Espectadores (2026), obra original de David Ortiz. Pieza única 1 de 1, técnica mixta, firmada a mano y con certificado. 40 x 60 cm. Adquiérela en MNEMOS.">
-<meta property="og:title" content="Espectadores, 2026 · Obra original de David Ortiz">
+<title>Eirene-7, 2026 · Obra original de David Ortiz | MNEMOS</title>
+<meta name="description" content="Eirene-7 (2026), obra original de David Ortiz. Pieza única 1 de 1, técnica mixta, firmada a mano y con certificado. 40 x 60 cm. Adquiérela en MNEMOS.">
+<meta property="og:title" content="Eirene-7, 2026 · Obra original de David Ortiz">
 <meta property="og:description" content="Pieza única 1 de 1. Técnica mixta, firmada y con certificado.">
-<meta property="og:image" content="https://mnemosgallery.neolabs.me/assets/obras/obra01-1600.jpg">
+<meta property="og:image" content="https://mnemosgallery.neolabs.me/assets/obras/obra02-1600.jpg">
 <meta property="og:type" content="website">
-<link rel="canonical" href="https://mnemosgallery.neolabs.me/obras/espectadores.html">
+<link rel="canonical" href="https://mnemosgallery.neolabs.me/obras/eirene-7.html">
 <link rel="icon" href="../assets/logo/favicon-512.png">
 <link rel="stylesheet" href="../assets/css/mnemos.css">
 </head>
@@ -24,14 +24,14 @@
     </div>
 
     <div class="sala-obra">
-      <img src="../assets/obras/obra01-1600.jpg" alt="Espectadores, obra original de David Ortiz: una multitud de espaldas ante dos muros colosales y una luz desconocida" width="1600" height="2400">
+      <img src="../assets/obras/obra02-1600.jpg" alt="Eirene-7, obra original de David Ortiz: un robot humanoide derrumbado en la acera, la gente pasa a su lado sin mirarlo" width="1600" height="2400">
     </div>
 
     <div class="sala-pie">
 
       <div>
         <div class="cartela">
-          <h1>Espectadores</h1>
+          <h1>Eirene-7</h1>
           <div class="anio">2026</div>
           <dl>
             <dt>Técnica</dt><dd>Técnica mixta. Impresión giclée sobre papel fine art mate de archivo 200 g/m², libre de ácido</dd>
@@ -47,9 +47,9 @@
       </div>
 
       <div class="hist">
-        <p>La sociedad mira cómo el mundo avanza hacia lo desconocido sin poder tomar el control.</p>
-        <p>Cientos de figuras de espaldas, idénticas en su gris, frente a dos muros que las superan hasta hacerlas parecer polvo. Al fondo, la luz que nadie ha decidido encender. Y el color que gotea por la pared, bajando desde arriba, sin pedir permiso: lo nuevo entrando en un mundo que solo acierta a mirarlo.</p>
-        <p>Una sola figura lleva naranja en la cabeza. Es la única que ha sido tocada por lo que viene. No está más cerca. Solo está manchada.</p>
+        <p>Es como la pobreza: todos miran hacia otro lado.</p>
+        <p>Un robot humanoide derrumbado en la acera de una calle concurrida. La gente pasa a su lado sin detenerse, sin mirarlo.</p>
+        <p>No es una escena de ciencia ficción: es la indiferencia que ya practicamos, trasladada al futuro. Él está pintado de color porque es el único que siente. Los que pasan son grises.</p>
         <img class="firma-s" src="../assets/logo/firma-blanca.png" alt="Firma de David Ortiz">
 
         <div class="compra">
@@ -57,7 +57,7 @@
             <div class="precio">250 €</div>
             <div class="nota">Envío mundial incluido · 5-12 días laborables según destino</div>
           </div>
-          <a class="btn btn-oro" href="https://buy.stripe.com/9B6dR8fMg6Vw9YW2bCcs808" target="_blank" rel="noopener">Adquirir esta obra</a>
+          <a class="btn btn-oro" href="https://buy.stripe.com/cNibJ07fKa7I5IG2bCcs807" target="_blank" rel="noopener">Adquirir esta obra</a>
           <a class="btn btn-linea" href="../index.html#contacto">Preguntar al artista</a>
         </div>
       </div>
@@ -79,7 +79,7 @@
 /* si la obra ya tiene dueño, no se puede comprar */
 (function(){
   fetch('https://mnemos-pedidos.dortizs76.workers.dev/estado').then(function(r){return r.json()}).then(function(d){
-    var i=((d&&d.obras)||{})['obra01'];
+    var i=((d&&d.obras)||{})['obra02'];
     if(!i||!i.vendida) return;
     var b=document.querySelector('.compra .btn-oro');
     if(b){ var a=document.createElement('div'); a.className='vendida-nota';

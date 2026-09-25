@@ -7,9 +7,9 @@
 <meta name="description" content="David Ortiz, artista de MNEMOS. Trabajo en inteligencia artificial y pinto sobre lo que veo en ella. Museo de obra original única, piezas firmadas y numeradas.">
 <meta property="og:title" content="David Ortiz — El artista · MNEMOS">
 <meta property="og:description" content="Artista visual. Trabajo en IA y pinto sobre lo que veo en ella. Museo de obra original única.">
-<meta property="og:image" content="https://magodago.github.io/mnemos/assets/artista.jpg">
+<meta property="og:image" content="https://mnemosgallery.neolabs.me/assets/artista.jpg">
 <meta property="og:type" content="website">
-<link rel="canonical" href="https://magodago.github.io/mnemos/artista.html">
+<link rel="canonical" href="https://mnemosgallery.neolabs.me/artista.html">
 <link rel="icon" href="assets/logo/favicon-512.png">
 <link rel="stylesheet" href="assets/css/mnemos.css">
 </head>
@@ -71,7 +71,7 @@ var cab=document.getElementById('cab');
 addEventListener('scroll',function(){cab.classList.toggle('fijo',scrollY>40)});
 var b=document.getElementById('burger'),n=document.getElementById('nav');
 b.addEventListener('click',function(){
-  var abierto = !n.classList.toggle('abierto');
+  var abierto = !n.classList.toggle('abierto');document.body.classList.toggle('menu-abierto');
   b.setAttribute('aria-expanded', abierto);
 });
 n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){

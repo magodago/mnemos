@@ -280,3 +280,13 @@ img[width][height]{height:auto}
 .vendida-nota{border:1px solid var(--linea);padding:22px 24px;font-size:.94rem;color:#4A443E;max-width:46ch}
 .vendida-nota b{font-family:var(--serif);font-weight:400;font-size:1.15rem;display:block;margin-bottom:8px;color:var(--tinta)}
 .vendida-nota a{color:var(--naranja)}
+
+/* ==== MENU MOVIL: el desenfoque de la cabecera crea un bloque contenedor y
+   recortaba el panel fijo del menu. Sin el, el panel vuelve a ser de pantalla
+   completa. Va al final para ganar en orden de cascada. ==== */
+@media(max-width:900px){
+  header.cab,header.cab.fijo{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(250,248,245,.97)}
+  body.menu-abierto{overflow:hidden}
+  .nav{z-index:99}
+  .nav.abierto{box-shadow:-30px 0 80px rgba(20,18,17,.28)}
+}

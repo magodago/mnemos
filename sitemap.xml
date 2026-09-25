@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://magodago.github.io/mnemos/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://magodago.github.io/mnemos/legales/aviso-legal.html</loc><priority>0.2</priority></url>
-  <url><loc>https://magodago.github.io/mnemos/legales/privacidad.html</loc><priority>0.2</priority></url>
-  <url><loc>https://magodago.github.io/mnemos/legales/terminos.html</loc><priority>0.3</priority></url>
+  <url><loc>https://mnemosgallery.neolabs.me/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://mnemosgallery.neolabs.me/legales/aviso-legal.html</loc><priority>0.2</priority></url>
+  <url><loc>https://mnemosgallery.neolabs.me/legales/privacidad.html</loc><priority>0.2</priority></url>
+  <url><loc>https://mnemosgallery.neolabs.me/legales/terminos.html</loc><priority>0.3</priority></url>
 </urlset>
