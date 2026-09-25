@@ -15,31 +15,39 @@
 </head>
 <body>
 
-<section class="sala">
-  <div class="wrap sala-in">
-
-    <div class="sala-cab">
-      <a href="../index.html">MNEMOS · Museo de arte</a>
-      <a href="../index.html#coleccion">← Volver a la exposición</a>
+<header class="sala-bar">
+  <div class="wrap sala-bar-in">
+    <a class="sala-marca" href="../index.html">MNEMOS</a>
+    <div class="sala-nav">
+      <span class="sala-cuenta">Colección Future · Obra 2 de 12</span>
+      <a class="sala-volver" href="../index.html#coleccion">&larr; Volver a la exposición</a>
     </div>
+  </div>
+</header>
 
-    <div class="sala-obra">
-      <img src="../assets/obras/obra02-1600.jpg" alt="Eirene-7, obra original de David Ortiz: un robot humanoide derrumbado en la acera, la gente pasa a su lado sin mirarlo" width="1600" height="2400">
-    </div>
+<main class="sala">
+  <div class="wrap">
+
+    <figure class="sala-obra">
+      <button class="sala-lienzo" id="abre-lupa" aria-label="Ver la obra en grande" aria-controls="lupa">
+        <img src="../assets/obras/obra02-1600.jpg" alt="Eirene-7, obra original de David Ortiz: un robot humanoide derrumbado en la acera, la gente pasa a su lado sin mirarlo" width="1600" height="2400">
+      </button>
+      <figcaption class="sala-pie-foto">Eirene-7 · 2026 · Técnica mixta<span>Pulsa la obra para verla en grande</span></figcaption>
+    </figure>
 
     <div class="sala-pie">
 
       <div>
         <div class="cartela">
           <h1>Eirene-7</h1>
-          <div class="anio">2026</div>
+          <div class="anio">2026 · Técnica mixta</div>
           <dl>
-            <dt>Técnica</dt><dd>Técnica mixta. Impresión giclée sobre papel fine art mate de archivo 200 g/m², libre de ácido</dd>
-            <dt>Medidas</dt><dd>40 × 60 cm</dd>
+            <dt>Medidas</dt><dd>40 × 60 cm (16 × 24 pulgadas)</dd>
             <dt>Soporte</dt><dd>Papel fine art mate de archivo 200 g/m², libre de ácido</dd>
+            <dt>Impresión</dt><dd>Giclée de 12 tintas</dd>
             <dt>Edición</dt><dd>Pieza única. No se volverá a imprimir</dd>
             <dt>Firma</dt><dd>Firmada a mano en el margen</dd>
-            <dt>Certificado</dt><dd>Incluido, numerado y verificable</dd>
+            <dt>Certificado</dt><dd>Incluido, numerado y verificable con código</dd>
           </dl>
           <div class="unica">Pieza única · 1 de 1</div>
         </div>
@@ -53,18 +61,37 @@
         <img class="firma-s" src="../assets/logo/firma-blanca.png" alt="Firma de David Ortiz">
 
         <div class="compra">
-          <div>
+          <div class="linea-precio">
             <div class="precio">250 €</div>
-            <div class="nota">Envío mundial incluido · 5-12 días laborables según destino</div>
+            <div class="nota">Envío mundial incluido · 5 a 12 días laborables según destino</div>
           </div>
-          <a class="btn btn-oro" href="https://buy.stripe.com/cNibJ07fKa7I5IG2bCcs807" target="_blank" rel="noopener">Adquirir esta obra</a>
-          <a class="btn btn-linea" href="../index.html#contacto">Preguntar al artista</a>
+          <div class="botones">
+            <a class="btn btn-oro" href="https://buy.stripe.com/cNibJ07fKa7I5IG2bCcs807" target="_blank" rel="noopener">Adquirir esta obra</a>
+            <a class="btn btn-linea" href="../index.html#contacto">Preguntar al artista</a>
+          </div>
+          <div class="garantias">
+            <span>Certificado numerado</span>
+            <span>Embalaje rígido</span>
+            <span>Pago seguro con tarjeta</span>
+          </div>
         </div>
       </div>
 
     </div>
+
+    <nav class="sala-paseo" aria-label="Recorrido por la exposición">
+      <a href="espectadores.html">&larr; Espectadores</a>
+      <span class="sep">Obra 2 de 12</span>
+      <a href="../index.html#coleccion">La exposición &rarr;</a>
+    </nav>
+
   </div>
-</section>
+</main>
+
+<div class="lupa" id="lupa" hidden>
+  <button class="lupa-cerrar" id="cierra-lupa" aria-label="Cerrar la vista grande">&times;</button>
+  <img src="../assets/obras/obra02-1600.jpg" alt="Eirene-7, obra original de David Ortiz, vista en grande">
+</div>
 
 <footer style="background:#0E0D0C">
   <div class="wrap">
@@ -74,8 +101,19 @@
   </div>
 </footer>
 
-
 <script>
+/* ver la obra en grande */
+(function(){
+  var lupa=document.getElementById('lupa'), abre=document.getElementById('abre-lupa'), cierra=document.getElementById('cierra-lupa');
+  if(!lupa||!abre) return;
+  function abrir(){ lupa.hidden=false; document.body.style.overflow='hidden'; if(cierra) cierra.focus(); }
+  function cerrar(){ lupa.hidden=true; document.body.style.overflow=''; abre.focus(); }
+  abre.addEventListener('click', abrir);
+  if(cierra) cierra.addEventListener('click', cerrar);
+  lupa.addEventListener('click', function(e){ if(e.target===lupa) cerrar(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && !lupa.hidden) cerrar(); });
+})();
+
 /* si la obra ya tiene dueño, no se puede comprar */
 (function(){
   fetch('https://mnemos-pedidos.dortizs76.workers.dev/estado').then(function(r){return r.json()}).then(function(d){
