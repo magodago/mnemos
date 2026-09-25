@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Avaricia, 2026 · Obra original de David Ortiz | MNEMOS</title>
+<meta name="description" content="Avaricia (2026), obra original de David Ortiz. Pieza única 1 de 1, técnica mixta, firmada a mano y con certificado. 40 x 60 cm. Adquiérela en MNEMOS.">
+<meta property="og:title" content="Avaricia, 2026 · Obra original de David Ortiz">
+<meta property="og:description" content="Pieza única 1 de 1. Técnica mixta, firmada y con certificado.">
+<meta property="og:image" content="https://mnemosgallery.neolabs.me/assets/obras/obra03-1600.jpg">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://mnemosgallery.neolabs.me/obras/avaricia.html">
+<link rel="icon" href="../assets/logo/favicon-512.png">
+<link rel="stylesheet" href="../assets/css/mnemos.css">
+</head>
+<body>
+
+<section class="sala">
+  <div class="wrap sala-in">
+
+    <div class="sala-cab">
+      <a href="../index.html">MNEMOS · Museo de arte</a>
+      <a href="../index.html#coleccion">← Volver a la exposición</a>
+    </div>
+
+    <div class="sala-obra">
+      <img src="../assets/obras/obra03-1600.jpg" alt="Avaricia, obra original de David Ortiz: decenas de manos de empresarios y de robots arrancan el oro de un mundo agotado" width="1066" height="1600">
+    </div>
+
+    <div class="sala-pie">
+
+      <div>
+        <div class="cartela">
+          <h1>Avaricia</h1>
+          <div class="anio">2026</div>
+          <dl>
+            <dt>Técnica</dt><dd>Técnica mixta. Impresión giclée sobre papel fine art mate de archivo 200 g/m², libre de ácido</dd>
+            <dt>Medidas</dt><dd>40 × 60 cm</dd>
+            <dt>Soporte</dt><dd>Papel fine art mate de archivo 200 g/m², libre de ácido</dd>
+            <dt>Edición</dt><dd>Pieza única. No se volverá a imprimir</dd>
+            <dt>Firma</dt><dd>Firmada a mano en el margen</dd>
+            <dt>Certificado</dt><dd>Incluido, numerado y verificable</dd>
+          </dl>
+          <div class="unica">Pieza única · 1 de 1</div>
+        </div>
+        <img class="sello-sala" src="../assets/logo/mnemos-simbolo.png" alt="Sello de MNEMOS">
+      </div>
+
+      <div class="hist">
+        <p>Nunca es suficiente. Y en el futuro, menos todavía.</p>
+        <p>Un mundo ya cubierto de oro y decenas de manos arrancándolo a la vez: empresarios de traje, robots humanoides, humanos a medio construir y humanos que ya no tienen nada de humanos. No se reparten nada: forcejean. Todos tiran en la misma dirección y nadie suelta.</p>
+        <p>La avaricia no es un vicio del pasado: es el motor del futuro. La inteligencia artificial, las máquinas y la fusión entre el hombre y el robot no vienen a repartir el mundo, vienen a quedárselo. Y a pasar por encima de quien haga falta para conseguirlo.</p>
+        <p>A sus pies, lo que ya saquearon: billetes, coronas, relojes, joyas. Al fondo, las torres que lo gobiernan todo y las banderas de un mundo que se reparte sin preguntar a nadie.</p>
+        <img class="firma-s" src="../assets/logo/firma-blanca.png" alt="Firma de David Ortiz">
+
+        <div class="compra">
+          <div>
+            <div class="precio">250 €</div>
+            <div class="nota">Envío mundial incluido · 5-12 días laborables según destino</div>
+          </div>
+          <a class="btn btn-oro" href="https://buy.stripe.com/28EbJ08jOa7Ic746rScs809" target="_blank" rel="noopener">Adquirir esta obra</a>
+          <a class="btn btn-linea" href="../index.html#contacto">Preguntar al artista</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer style="background:#0E0D0C">
+  <div class="wrap">
+    <img class="logo-f" src="../assets/logo/mnemos-oscuro.png" alt="MNEMOS">
+    <div>MNEMOS · Museo de arte · Obra original de David Ortiz</div>
+    <div style="margin-top:14px"><a href="../index.html">Inicio</a> · <a href="../legales/aviso-legal.html">Aviso legal</a> · <a href="../legales/privacidad.html">Privacidad</a> · <a href="../legales/terminos.html">Términos de venta</a></div>
+  </div>
+</footer>
+
+<script>
+/* si la obra ya tiene dueño, no se puede comprar */
+(function(){
+  fetch('https://mnemos-pedidos.dortizs76.workers.dev/estado').then(function(r){return r.json()}).then(function(d){
+    var i=((d&&d.obras)||{})['obra03'];
+    if(!i||!i.vendida) return;
+    var b=document.querySelector('.compra .btn-oro');
+    if(b){ var a=document.createElement('div'); a.className='vendida-nota';
+      a.innerHTML='<b>Obra vendida.</b> Esta pieza ya tiene dueño. Si te interesa una obra parecida, <a href="../index.html#contacto">escríbeme y hablamos del encargo</a>.';
+      b.replaceWith(a); }
+    var c=document.querySelector('.cartela .unica');
+    if(c) c.textContent='Pieza única · vendida';
+  }).catch(function(){});
+})();
+</script>
+</body>
+</html>
