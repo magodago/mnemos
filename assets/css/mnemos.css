@@ -256,3 +256,10 @@ header.cab.fijo{padding:12px 0}
 
 /* las imagenes con atributos de tamano mantienen su proporcion */
 img[width][height]{height:auto}
+
+/* movil: portada de texto y la galeria justo debajo, sin repetir el cuadro */
+@media(max-width:980px){
+  .portada{padding:132px 0 66px}
+  .portada-img{display:none}
+  .portada-in{gap:0}
+}
