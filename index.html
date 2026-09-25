@@ -43,7 +43,7 @@
       <a href="#certificado">Certificado</a>
       <a href="#contacto">Contacto</a>
     </nav>
-    <button class="burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+    <button class="burger" id="burger" aria-label="Menú" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -266,8 +266,13 @@
 var cab=document.getElementById('cab');
 addEventListener('scroll',function(){cab.classList.toggle('fijo',scrollY>40)});
 var b=document.getElementById('burger'),n=document.getElementById('nav');
-b.addEventListener('click',function(){n.classList.toggle('abierto')});
-n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('abierto')})});
+b.addEventListener('click',function(){
+  var abierto = !n.classList.toggle('abierto');
+  b.setAttribute('aria-expanded', abierto);
+});
+n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){
+  n.classList.remove('abierto'); b.setAttribute('aria-expanded', 'false');
+})});
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('ya');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.ap').forEach(function(e){io.observe(e)});
 /* red de seguridad: lo que ya esta en pantalla se muestra igualmente */

@@ -21,13 +21,13 @@ h1,h2,h3,.serif{font-family:var(--serif);font-weight:400;line-height:1.1;letter-
 h1{font-size:clamp(2.4rem,5.4vw,4.4rem)}
 h2{font-size:clamp(1.7rem,3.2vw,2.9rem)}
 h3{font-size:clamp(1.15rem,1.7vw,1.5rem)}
-.kicker{font-family:var(--sans);font-size:.7rem;font-weight:500;letter-spacing:.34em;text-transform:uppercase;color:var(--gris)}
+.kicker{font-family:var(--sans);font-size:.75rem;font-weight:500;letter-spacing:.34em;text-transform:uppercase;color:var(--gris)}
 .lead{font-size:1.09rem;color:#3A3530;max-width:60ch}
 .dato{font-family:var(--sans);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gris)}
 
 /* cabecera */
-header.cab{position:fixed;top:0;left:0;right:0;z-index:90;padding:20px 0;transition:all .45s ease;background:rgba(250,248,245,0)}
-header.cab.fijo{background:rgba(250,248,245,.95);backdrop-filter:blur(14px);padding:13px 0;border-bottom:1px solid var(--linea)}
+header.cab{position:fixed;top:0;left:0;right:0;z-index:90;padding:20px 0;transition:all .45s ease;background:rgba(250,248,245,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--linea)}
+header.cab.fijo{padding:13px 0}
 .cab-in{display:flex;align-items:center;justify-content:space-between;gap:20px}
 .logo img{height:42px;width:auto}
 .nav{display:flex;gap:34px;align-items:center;z-index:96}
@@ -59,9 +59,9 @@ section.aire{padding:88px 0}
 @media(max-width:900px){
   .wrap{padding:0 20px}
   section{padding:76px 0}
-  .nav{position:fixed;inset:0 0 0 auto;width:82%;max-width:340px;background:var(--papel);flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);transition:.45s ease;box-shadow:-20px 0 60px rgba(0,0,0,.09);z-index:99}
+  .nav{position:fixed;inset:0 0 0 auto;width:100%;max-width:300px;background:#FAF8F5;flex-direction:column;justify-content:flex-start;padding:96px 26px 44px;overflow-y:auto;transform:translateX(100%);transition:.45s ease;box-shadow:-24px 0 70px rgba(20,18,17,.18);z-index:99}
   .nav.abierto{transform:none}
-  .nav a{font-size:1.05rem;font-family:var(--serif)}
+  .nav a{font-size:1.05rem;font-family:var(--serif);color:var(--tinta);min-height:44px;display:flex;align-items:center}
   .burger{display:block;z-index:100}
   .burger span{background:var(--tinta)}
 }
@@ -134,7 +134,7 @@ footer{background:var(--tinta);color:rgba(250,248,245,.62);padding:76px 0 40px;f
 .foot-in{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:50px;padding-bottom:50px}
 footer .logo-f{height:30px;margin-bottom:20px;opacity:.95}
 footer h4{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,248,245,.45);margin-bottom:18px;font-weight:500}
-footer a{display:block;padding:6px 0;transition:color .3s}
+footer a{display:block;padding:12px 0;transition:color .3s;min-height:44px}
 footer a:hover{color:var(--naranja)}
 .foot-bajo{border-top:1px solid rgba(250,248,245,.14);padding-top:26px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.78rem}
 
@@ -202,8 +202,8 @@ background:radial-gradient(ellipse 30% 38% at 50% 26%, rgba(255,222,184,.26), rg
 .obra-info{padding-top:24px}
 .obra-info h3{font-size:1.65rem;margin:0 0 7px}
 .obra-info p{color:#5A544D;margin:0 0 12px;font-size:.95rem}
-.disp{display:inline-block;border:1px solid var(--naranja);color:var(--naranja);padding:5px 14px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}
-@media(max-width:900px){.grid-obras{grid-template-columns:1fr 1fr;gap:30px 15px}.obra-info{padding-top:13px}.obra-info h3{font-size:1.02rem;margin-bottom:4px}.obra-info p{font-size:.75rem;margin-bottom:8px}.disp{padding:3px 8px;font-size:.57rem;letter-spacing:.1em}}
+.disp{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--naranja);color:var(--naranja);background:transparent;padding:6px 16px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}
+@media(max-width:900px){.grid-obras{grid-template-columns:1fr 1fr;gap:30px 15px}.obra-info{padding-top:13px}.obra-info h3{font-size:1.02rem;margin-bottom:4px}.obra-info p{font-size:.75rem;margin-bottom:8px}.disp{padding:6px 12px;font-size:.68rem;letter-spacing:.1em}}
 
 .mnemo{background:var(--tinta);color:var(--papel);padding:118px 0}
 .mnemo h2{color:var(--papel)}
