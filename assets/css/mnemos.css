@@ -265,3 +265,11 @@ img[width][height]{height:auto}
   .portada-img{display:none}
   .portada-in{gap:0}
 }
+
+/* aviso de compra completada */
+.gracias{position:fixed;left:0;right:0;bottom:0;background:var(--tinta);color:var(--papel);z-index:97;padding:16px 0;box-shadow:0 -14px 40px rgba(20,18,17,.28)}
+.gracias .wrap{position:relative;padding-right:60px}
+.gracias p{margin:0;font-size:.92rem;line-height:1.55;max-width:90ch;color:rgba(250,248,245,.9)}
+.gracias b{color:var(--papel);font-weight:500}
+.gracias button{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:0;color:rgba(250,248,245,.75);font-size:1.5rem;line-height:1;cursor:pointer;min-width:44px;min-height:44px}
+.gracias button:hover{color:var(--naranja)}

@@ -47,6 +47,14 @@
   </div>
 </header>
 
+<!-- AVISO DE COMPRA COMPLETADA -->
+<div class="gracias" id="gracias" hidden role="status">
+  <div class="wrap">
+    <p><b>Gracias. Tu obra ya está en marcha.</b> Recibirás el recibo por correo. La impresión se prepara en 24 horas y sale hacia tu dirección con envío asegurado y seguimiento. El certificado de autenticidad va dentro.</p>
+    <button type="button" id="cierra-gracias" aria-label="Cerrar aviso">&times;</button>
+  </div>
+</div>
+
 <!-- PORTADA DEL MUSEO -->
 <section class="portada">
   <div class="wrap portada-in">
@@ -275,6 +283,14 @@ n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(
 })});
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('ya');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.ap').forEach(function(e){io.observe(e)});
+/* aviso de compra completada */
+(function(){
+  var g=document.getElementById('gracias');
+  if(!g||location.search.indexOf('adquirida')<0) return;
+  g.hidden=false;
+  var c=document.getElementById('cierra-gracias');
+  if(c) c.addEventListener('click',function(){g.hidden=true});
+})();
 /* red de seguridad: lo que ya esta en pantalla se muestra igualmente */
 setTimeout(function(){document.querySelectorAll('.ap').forEach(function(e){var r=e.getBoundingClientRect();if(r.top<innerHeight*0.95&&r.bottom>0){e.classList.add('ya')}})},150);
 </script>
