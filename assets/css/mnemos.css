@@ -261,7 +261,7 @@ box-shadow:0 44px 120px rgba(0,0,0,.78), 0 0 0 1px rgba(250,248,245,.10), 0 0 13
 @media(max-width:900px){.libro{grid-template-columns:1fr;gap:34px}.mnemo{padding:78px 0}}
 
 /* PORTADA DEL MUSEO */
-header.cab{background:rgba(250,248,245,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--linea)}
+header.cab{background:rgba(250,248,245,.97);border-bottom:1px solid var(--linea)}
 header.cab.fijo{padding:12px 0}
 .portada{background:var(--tinta);color:var(--papel);padding:196px 0 104px}
 .portada-in{display:grid;grid-template-columns:minmax(0,860px);gap:0;align-items:center}
@@ -336,4 +336,29 @@ img[width][height]{height:auto}
   body.menu-abierto{overflow:hidden}
   .nav{z-index:99}
   .nav.abierto{box-shadow:-30px 0 80px rgba(20,18,17,.28)}
+}
+
+/* ETIQUETA DE SALA EN LAS TARJETAS */
+.sala-tag{font-family:var(--sans);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--naranja);margin-bottom:10px}
+
+/* EL TALLER: las obras que vienen */
+.taller{margin-top:96px;border-top:1px solid var(--linea);padding-top:56px}
+.taller-cab{max-width:780px}
+.taller-cab h3{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.3rem);margin-top:14px;font-weight:400}
+.taller-cab p{color:var(--gris);margin-top:14px;font-size:.98rem;line-height:1.8}
+.taller-lista{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:46px}
+.taller-lista li{border:1px solid var(--linea);background:linear-gradient(180deg,#FFFFFF,#F7F4EF);aspect-ratio:2/3;display:flex;flex-direction:column;justify-content:space-between;padding:16px 14px;transition:.4s;min-width:0}
+.taller-lista li:hover{border-color:var(--naranja);transform:translateY(-3px);box-shadow:0 18px 40px rgba(20,18,17,.10)}
+.taller-lista .num{font-family:var(--serif);font-size:1.5rem;color:var(--tinta);line-height:1}
+.taller-lista .simbolo{width:24px;opacity:.32;margin:0 auto}
+.taller-lista .est{font-family:var(--sans);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gris)}
+.taller-pie{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:36px}
+.taller-pie p{font-size:.88rem;color:var(--gris);max-width:52ch}
+@media(max-width:900px){
+  .taller{margin-top:64px;padding-top:42px}
+  .taller-lista{grid-template-columns:repeat(3,1fr);gap:12px;margin-top:32px}
+  .taller-lista li{padding:12px 10px}
+  .taller-lista .num{font-size:1.15rem}
+  .taller-lista .simbolo{width:18px}
+  .taller-lista .est{font-size:.52rem;letter-spacing:.14em}
 }
