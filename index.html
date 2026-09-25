@@ -275,8 +275,8 @@ var cab=document.getElementById('cab');
 addEventListener('scroll',function(){cab.classList.toggle('fijo',scrollY>40)});
 var b=document.getElementById('burger'),n=document.getElementById('nav');
 b.addEventListener('click',function(){
-  var abierto = !n.classList.toggle('abierto');document.body.classList.toggle('menu-abierto');
-  b.setAttribute('aria-expanded', abierto);
+  var abierto = n.classList.toggle('abierto');document.body.classList.toggle('menu-abierto');
+  b.setAttribute('aria-expanded', abierto ? 'true' : 'false');
 });
 n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){
   n.classList.remove('abierto'); b.setAttribute('aria-expanded', 'false');
