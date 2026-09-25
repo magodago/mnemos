@@ -196,15 +196,15 @@ box-shadow:0 44px 120px rgba(0,0,0,.78), 0 0 0 1px rgba(250,248,245,.10), 0 0 13
 .cartela .unica{display:inline-block;margin-top:26px;border:1px solid rgba(238,94,16,.55);color:var(--naranja);font-size:.66rem;letter-spacing:.2em;padding:9px 16px;text-transform:uppercase}
 .sello-sala{width:66px;opacity:.85;margin-top:26px}
 .hist p{font-family:var(--serif);font-size:1.18rem;line-height:1.86;color:rgba(250,248,245,.89);margin-bottom:20px}
-.hist p:first-child::first-letter{font-size:3em;float:left;line-height:.84;padding:6px 13px 0 0;color:var(--naranja);font-family:var(--serif)}
+.hist p:first-child::first-letter{font-size:2.9em;float:left;line-height:.82;padding:5px 7px 0 0;margin-right:-1px;color:var(--naranja);font-family:var(--serif)}
 .hist .firma-s{width:190px;margin-top:30px;opacity:.9}
 .compra{margin-top:40px;padding-top:30px;border-top:1px solid rgba(250,248,245,.14)}
 .compra .linea-precio{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
 .compra .precio{font-family:var(--serif);font-size:2rem;color:var(--papel)}
 .compra .nota{font-size:.74rem;color:rgba(250,248,245,.52);letter-spacing:.03em}
-.compra .botones{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
-.garantias{margin-top:24px;display:flex;flex-wrap:wrap;gap:9px 22px}
-.garantias span{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(250,248,245,.5);display:inline-flex;align-items:center;gap:9px}
+.compra .botones{display:grid;grid-template-columns:repeat(auto-fit,minmax(184px,1fr));gap:14px;margin-top:24px;max-width:540px}
+.garantias{margin-top:26px;border-top:1px solid rgba(250,248,245,.12);padding-top:18px;display:grid;gap:9px}
+.garantias span{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(250,248,245,.5);display:flex;align-items:center;gap:10px}
 .garantias span::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--naranja);flex:none}
 .btn-oro{background:var(--naranja);border-color:var(--naranja);color:#fff}
 .btn-oro:hover{background:#fff;border-color:#fff;color:var(--tinta)}
@@ -271,7 +271,7 @@ header.cab.fijo{padding:12px 0}
 .portada h1.marca img{display:block;width:clamp(248px,44vw,520px);height:auto}
 .portada .claim{font-family:var(--serif);font-size:clamp(1.15rem,2vw,1.62rem);color:#EFE9E1;margin-top:26px;max-width:24ch;line-height:1.42}
 .portada .lead{max-width:44ch}
-.btn-linea{background:transparent;border-color:rgba(250,248,245,.42);color:var(--papel)}
+.btn-linea{background:transparent;border-color:rgba(250,248,245,.62);color:var(--papel)}
 .btn-linea:hover{background:var(--papel);border-color:var(--papel);color:var(--tinta)}
 .portada-img{position:relative}
 .portada-img img{box-shadow:0 40px 120px rgba(0,0,0,.55)}
@@ -362,3 +362,29 @@ img[width][height]{height:auto}
   .taller-lista .simbolo{width:18px}
   .taller-lista .est{font-size:.52rem;letter-spacing:.14em}
 }
+
+/* PIE DE PAGINA EN FILA (sin puntos sueltos) */
+.pie-enlaces{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:18px}
+.pie-enlaces a{color:rgba(250,248,245,.72);text-decoration:none;font-size:.82rem;letter-spacing:.04em}
+.pie-enlaces a:hover{color:var(--naranja)}
+
+/* SELLO DENTRO DE LA CARTELA */
+.sala .cartela{position:relative}
+.sala .cartela .sello-cartela{position:absolute;right:24px;bottom:22px;width:52px;opacity:.45}
+
+/* PRECIO EN LOS HUECOS DEL TALLER */
+.taller-lista .fin{display:flex;flex-direction:column;gap:5px}
+.taller-lista .precio-t{font-family:var(--serif);font-size:.86rem;color:var(--naranja);line-height:1}
+
+/* en movil los botones de compra, uno debajo de otro y a lo ancho */
+@media(max-width:560px){
+  .compra .botones{grid-template-columns:1fr;max-width:none}
+  .compra .btn{width:100%;justify-content:center}
+}
+
+/* SELLO Y FIRMA CON ETIQUETA (nada suelto) */
+.sala .cartela .sello-cartela{position:static;display:flex;align-items:center;gap:11px;margin-top:24px;padding-top:16px;border-top:1px solid rgba(250,248,245,.12);width:auto;opacity:1}
+.sala .cartela .sello-cartela img{width:30px;opacity:.8}
+.sala .cartela .sello-cartela span{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,248,245,.45)}
+.firma-caja{margin-top:32px}
+.firma-caja figcaption{margin-top:9px;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,248,245,.42)}
