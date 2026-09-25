@@ -79,7 +79,7 @@
       <p class="lead">Doce obras sobre lo que viene. Cada una nace de una idea que da vueltas durante meses. Cuando se imprime, se firma y se numera, no se vuelve a imprimir nunca. Ya están disponibles las dos primeras.</p>
     </div>
     <div class="grid-obras">
-      <a class="obra-card ap" href="obras/espectadores.html">
+      <a class="obra-card ap" data-obra="obra01" href="obras/espectadores.html">
         <img src="assets/obras/obra01-1600.jpg" srcset="assets/obras/obra01-900.jpg 900w, assets/obras/obra01-1600.jpg 1600w" sizes="(max-width:900px) 46vw, 30vw" alt="Espectadores, obra original de David Ortiz" width="1600" height="2400" loading="lazy">
         <div class="obra-info">
           <h3>Espectadores</h3>
@@ -87,7 +87,7 @@
           <span class="disp">Disponible &middot; 250 €</span>
         </div>
       </a>
-      <a class="obra-card ap" href="obras/el-que-siente.html">
+      <a class="obra-card ap" data-obra="obra02" href="obras/el-que-siente.html">
         <img src="assets/obras/obra02-1600.jpg" srcset="assets/obras/obra02-900.jpg 900w, assets/obras/obra02-1600.jpg 1600w" sizes="(max-width:900px) 46vw, 30vw" alt="El que siente, obra original de David Ortiz" width="1600" height="2400" loading="lazy">
         <div class="obra-info">
           <h3>El que siente</h3>
@@ -290,6 +290,21 @@ document.querySelectorAll('.ap').forEach(function(e){io.observe(e)});
   g.hidden=false;
   var c=document.getElementById('cierra-gracias');
   if(c) c.addEventListener('click',function(){g.hidden=true});
+})();
+
+/* obras vendidas: se marcan solas consultando el estado */
+(function(){
+  fetch('https://mnemos-pedidos.dortizs76.workers.dev/estado').then(function(r){return r.json()}).then(function(d){
+    var o=(d&&d.obras)||{};
+    Object.keys(o).forEach(function(k){
+      if(!o[k]||!o[k].vendida) return;
+      var c=document.querySelector('[data-obra="'+k+'"]');
+      if(!c) return;
+      c.classList.add('vendida');
+      var ch=c.querySelector('.disp');
+      if(ch) ch.textContent='Vendida';
+    });
+  }).catch(function(){});
 })();
 /* red de seguridad: lo que ya esta en pantalla se muestra igualmente */
 setTimeout(function(){document.querySelectorAll('.ap').forEach(function(e){var r=e.getBoundingClientRect();if(r.top<innerHeight*0.95&&r.bottom>0){e.classList.add('ya')}})},150);

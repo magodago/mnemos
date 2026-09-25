@@ -273,3 +273,10 @@ img[width][height]{height:auto}
 .gracias b{color:var(--papel);font-weight:500}
 .gracias button{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:0;color:rgba(250,248,245,.75);font-size:1.5rem;line-height:1;cursor:pointer;min-width:44px;min-height:44px}
 .gracias button:hover{color:var(--naranja)}
+
+/* obra vendida */
+.obra-card.vendida img{opacity:.42;filter:grayscale(.35)}
+.obra-card.vendida .disp{color:var(--gris);border-color:var(--linea)}
+.vendida-nota{border:1px solid var(--linea);padding:22px 24px;font-size:.94rem;color:#4A443E;max-width:46ch}
+.vendida-nota b{font-family:var(--serif);font-weight:400;font-size:1.15rem;display:block;margin-bottom:8px;color:var(--tinta)}
+.vendida-nota a{color:var(--naranja)}

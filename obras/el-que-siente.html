@@ -74,5 +74,21 @@
   </div>
 </footer>
 
+
+<script>
+/* si la obra ya tiene dueño, no se puede comprar */
+(function(){
+  fetch('https://mnemos-pedidos.dortizs76.workers.dev/estado').then(function(r){return r.json()}).then(function(d){
+    var i=((d&&d.obras)||{})['obra02'];
+    if(!i||!i.vendida) return;
+    var b=document.querySelector('.compra .btn-oro');
+    if(b){ var a=document.createElement('div'); a.className='vendida-nota';
+      a.innerHTML='<b>Obra vendida.</b> Esta pieza ya tiene dueño. Si te interesa una obra parecida, <a href="../index.html#contacto">escríbeme y hablamos del encargo</a>.';
+      b.replaceWith(a); }
+    var c=document.querySelector('.cartela .unica');
+    if(c) c.textContent='Pieza única · vendida';
+  }).catch(function(){});
+})();
+</script>
 </body>
 </html>
