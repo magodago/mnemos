@@ -23,7 +23,7 @@
     {"@type":"Organization","@id":"https://mnemosgallery.neolabs.me/#museo","name":"MNEMOS","description":"Museo de obra original única. Arte contemporáneo de David Ortiz.","url":"https://mnemosgallery.neolabs.me/","logo":"https://mnemosgallery.neolabs.me/assets/logo/mnemos-claro.png"},
     {"@type":"Person","@id":"https://mnemosgallery.neolabs.me/#artista","name":"David Ortiz","jobTitle":"Artista visual","description":"Artista visual. Pinta sobre lo que viene, capa a capa, en piezas únicas."},
     {"@type":"CollectionPage","@id":"https://mnemosgallery.neolabs.me/#coleccion","name":"La colección FUTURE","description":"Doce obras sobre lo que viene. Cada pieza es original, única, firmada a mano y numerada.","isPartOf":{"@id":"https://mnemosgallery.neolabs.me/#museo"},"about":{"@id":"https://mnemosgallery.neolabs.me/#artista"},"hasPart":[
-      {"@type":"VisualArtwork","@id":"https://mnemosgallery.neolabs.me/obras/espectadores.html","name":"Espectadores","dateCreated":"2026","artform":"Técnica mixta","artMedium":"Impresión giclée sobre papel fine art mate de archivo 200 g/m²","width":{"@type":"QuantitativeValue","value":40,"unitCode":"CMT"},"height":{"@type":"QuantitativeValue","value":60,"unitCode":"CMT"},"creator":{"@id":"https://mnemosgallery.neolabs.me/#artista"},"description":"La sociedad mira cómo el mundo avanza hacia lo desconocido sin poder tomar el control.","image":"https://mnemosgallery.neolabs.me/assets/obras/obra01-1066.jpg","offers":{"@type":"Offer","price":"250","priceCurrency":"EUR","availability":"https://schema.org/InStock","itemCondition":"https://schema.org/NewCondition","url":"https://mnemosgallery.neolabs.me/obras/espectadores.html"}},
+      {"@type":"VisualArtwork","@id":"https://mnemosgallery.neolabs.me/obras/soledad.html","name":"Soledad","dateCreated":"2026","artform":"Técnica mixta","artMedium":"Impresión giclée sobre papel fine art mate de archivo 200 g/m²","width":{"@type":"QuantitativeValue","value":40,"unitCode":"CMT"},"height":{"@type":"QuantitativeValue","value":60,"unitCode":"CMT"},"creator":{"@id":"https://mnemosgallery.neolabs.me/#artista"},"description":"La sociedad mira cómo el mundo avanza hacia lo desconocido sin poder tomar el control.","image":"https://mnemosgallery.neolabs.me/assets/obras/obra01-1066.jpg","offers":{"@type":"Offer","price":"250","priceCurrency":"EUR","availability":"https://schema.org/InStock","itemCondition":"https://schema.org/NewCondition","url":"https://mnemosgallery.neolabs.me/obras/soledad.html"}},
       {"@type":"VisualArtwork","@id":"https://mnemosgallery.neolabs.me/obras/eirene-7.html","name":"Eirene-7","dateCreated":"2026","artform":"Técnica mixta","artMedium":"Impresión giclée sobre papel fine art mate de archivo 200 g/m²","width":{"@type":"QuantitativeValue","value":40,"unitCode":"CMT"},"height":{"@type":"QuantitativeValue","value":60,"unitCode":"CMT"},"creator":{"@id":"https://mnemosgallery.neolabs.me/#artista"},"image":"https://mnemosgallery.neolabs.me/assets/obras/obra02-1066.jpg","offers":{"@type":"Offer","price":"250","priceCurrency":"EUR","availability":"https://schema.org/InStock","itemCondition":"https://schema.org/NewCondition","url":"https://mnemosgallery.neolabs.me/obras/eirene-7.html"}}
     ]}
   ]
@@ -80,11 +80,11 @@
       <div class="recorrido" style="margin-top:26px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gris)">Recorrido &middot; Sala I, II y III abiertas &middot; <a href="#taller" style="color:var(--naranja)">Nueve obras en el taller</a></div>
     </div>
     <div class="grid-obras">
-      <a class="obra-card ap" data-obra="obra01" href="obras/espectadores.html">
-        <img src="assets/obras/obra01-1066.jpg" srcset="assets/obras/obra01-600.jpg 600w, assets/obras/obra01-1066.jpg 1066w" sizes="(max-width:900px) 46vw, 30vw" alt="Espectadores, obra original de David Ortiz" width="1066" height="1599" loading="lazy">
+      <a class="obra-card ap" data-obra="obra01" href="obras/soledad.html">
+        <img src="assets/obras/obra01-1066.jpg" srcset="assets/obras/obra01-600.jpg 600w, assets/obras/obra01-1066.jpg 1066w" sizes="(max-width:900px) 46vw, 30vw" alt="Soledad, obra original de David Ortiz" width="1066" height="1599" loading="lazy">
         <div class="obra-info">
           <div class="sala-tag">Sala I · Obra 1 de 12</div>
-          <h3>Espectadores</h3>
+          <h3>Soledad</h3>
           <p>2026 &middot; Técnica mixta &middot; 40 &times; 60 cm</p>
           <span class="disp">Disponible &middot; 250 €</span>
         </div>
@@ -269,7 +269,7 @@
       <div class="campos">
         <div><label for="n">Nombre</label><input id="n" type="text" name="nombre" required></div>
         <div><label for="e">Email</label><input id="e" type="email" name="email" required></div>
-        <div><label for="o">Obra o asunto</label><input id="o" type="text" name="obra" placeholder="Espectadores · Encargo · Duda"></div>
+        <div><label for="o">Obra o asunto</label><input id="o" type="text" name="obra" placeholder="Soledad · Encargo · Duda"></div>
         <div><label for="m">Mensaje</label><textarea id="m" name="mensaje" required></textarea></div>
         <button class="btn" type="submit" style="justify-self:start">Enviar mensaje</button>
       </div>
