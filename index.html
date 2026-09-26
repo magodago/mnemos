@@ -21,7 +21,7 @@
   "@context":"https://schema.org",
   "@graph":[
     {"@type":"Organization","@id":"https://mnemosgallery.neolabs.me/#museo","name":"MNEMOS","description":"Museo de obra original única. Arte contemporáneo de David Ortiz.","url":"https://mnemosgallery.neolabs.me/","logo":"https://mnemosgallery.neolabs.me/assets/logo/mnemos-claro.png"},
-    {"@type":"Person","@id":"https://mnemosgallery.neolabs.me/#artista","name":"David Ortiz","jobTitle":"Artista visual","description":"Artista visual. Trabaja en inteligencia artificial y pinta sobre lo que ve en ella."},
+    {"@type":"Person","@id":"https://mnemosgallery.neolabs.me/#artista","name":"David Ortiz","jobTitle":"Artista visual","description":"Artista visual. Pinta sobre lo que viene, capa a capa, en piezas únicas."},
     {"@type":"CollectionPage","@id":"https://mnemosgallery.neolabs.me/#coleccion","name":"La colección FUTURE","description":"Doce obras sobre lo que viene. Cada pieza es original, única, firmada a mano y numerada.","isPartOf":{"@id":"https://mnemosgallery.neolabs.me/#museo"},"about":{"@id":"https://mnemosgallery.neolabs.me/#artista"},"hasPart":[
       {"@type":"VisualArtwork","@id":"https://mnemosgallery.neolabs.me/obras/espectadores.html","name":"Espectadores","dateCreated":"2026","artform":"Técnica mixta","artMedium":"Impresión giclée sobre papel fine art mate de archivo 200 g/m²","width":{"@type":"QuantitativeValue","value":40,"unitCode":"CMT"},"height":{"@type":"QuantitativeValue","value":60,"unitCode":"CMT"},"creator":{"@id":"https://mnemosgallery.neolabs.me/#artista"},"description":"La sociedad mira cómo el mundo avanza hacia lo desconocido sin poder tomar el control.","image":"https://mnemosgallery.neolabs.me/assets/obras/obra01-1066.jpg","offers":{"@type":"Offer","price":"250","priceCurrency":"EUR","availability":"https://schema.org/InStock","itemCondition":"https://schema.org/NewCondition","url":"https://mnemosgallery.neolabs.me/obras/espectadores.html"}},
       {"@type":"VisualArtwork","@id":"https://mnemosgallery.neolabs.me/obras/eirene-7.html","name":"Eirene-7","dateCreated":"2026","artform":"Técnica mixta","artMedium":"Impresión giclée sobre papel fine art mate de archivo 200 g/m²","width":{"@type":"QuantitativeValue","value":40,"unitCode":"CMT"},"height":{"@type":"QuantitativeValue","value":60,"unitCode":"CMT"},"creator":{"@id":"https://mnemosgallery.neolabs.me/#artista"},"image":"https://mnemosgallery.neolabs.me/assets/obras/obra02-1066.jpg","offers":{"@type":"Offer","price":"250","priceCurrency":"EUR","availability":"https://schema.org/InStock","itemCondition":"https://schema.org/NewCondition","url":"https://mnemosgallery.neolabs.me/obras/eirene-7.html"}}
@@ -61,7 +61,7 @@
     <div class="ap">
       <h1 class="marca"><img src="assets/logo/mnemos-oscuro-goteo.png" alt="MNEMOS, museo de arte original de David Ortiz" width="1057" height="424"></h1>
       <p class="claim">Una obra. Un pensamiento. Una sola copia.</p>
-      <p class="lead" style="color:#B9B2AA;margin-top:22px">Museo de pieza única. Cada obra se crea una vez, se firma a mano, se numera y no se vuelve a imprimir. Obra original de David Ortiz sobre lo que viene.</p>
+      <p class="lead" style="color:#B9B2AA;margin-top:22px">Museo de pieza única. Cada obra se crea una vez, se firma, se numera y no se vuelve a imprimir. Obra original de David Ortiz sobre lo que viene.</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:38px">
         <a class="btn" href="#coleccion">Ver la colección</a>
         <a class="btn btn-linea" href="#mnemos">Por qué MNEMOS</a>
@@ -86,7 +86,7 @@
           <div class="sala-tag">Sala I · Obra 1 de 12</div>
           <h3>Espectadores</h3>
           <p>2026 &middot; Técnica mixta &middot; 40 &times; 60 cm</p>
-          <span class="disp">Disponible &middot; 250 €</span>
+          <span class="disp">Disponible &middot; 1.200 €</span>
         </div>
       </a>
       <a class="obra-card ap" data-obra="obra02" href="obras/eirene-7.html">
@@ -95,15 +95,16 @@
           <div class="sala-tag">Sala II · Obra 2 de 12</div>
           <h3>Eirene-7</h3>
           <p>2026 &middot; Técnica mixta &middot; 40 &times; 60 cm</p>
-          <span class="disp">Disponible &middot; 350 €</span>
+          <span class="disp">Disponible &middot; 1.800 €</span>
         </div>
       </a>
       <a class="obra-card ap" data-obra="obra03" href="obras/avaricia.html">
         <img src="assets/obras/obra03-1066.jpg" srcset="assets/obras/obra03-600.jpg 600w, assets/obras/obra03-1066.jpg 1066w" sizes="(max-width:900px) 46vw, 30vw" alt="Avaricia, obra original de David Ortiz: decenas de manos de empresarios y de robots arrancan el oro de un mundo agotado">
         <div class="obra-info">
+          <div class="sala-tag">Sala III · Obra 3 de 12</div>
           <h3>Avaricia</h3>
           <p>2026 &middot; Técnica mixta &middot; 40 &times; 60 cm</p>
-          <span class="disp">Disponible &middot; 450 €</span>
+          <span class="disp">Disponible &middot; 2.400 €</span>
         </div>
       </a>
       <div class="aviso-obra ap">
@@ -124,24 +125,23 @@
     <div class="taller ap" id="taller">
       <div class="taller-cab">
         <div class="kicker">El taller</div>
-        <h3>Las diez obras que vienen</h3>
-        <p>FUTURE son doce piezas. Estas diez están en proceso, una detrás de otra, y se publican de una en una cuando están terminadas y firmadas. Cada obra nueva cuesta 100 € más que la anterior: las primeras son siempre las más baratas.</p>
+        <h3>Las nueve obras que vienen</h3>
+        <p>FUTURE son doce piezas. Estas nueve están en proceso, una detrás de otra, y se publican de una en una cuando están terminadas y firmadas. Cada obra nueva cuesta 600 € más que la anterior: las primeras son siempre las más baratas.</p>
       </div>
       <ul class="taller-lista">
-        <li><span class="num">III</span><img class="simbolo" src="assets/logo/mnemos-simbolo.png" alt=""><div class="fin"><span class="est">En proceso</span><span class="precio-t">450 €</span></div></li>
-        <li><span class="num">IV</span><img class="simbolo" src="assets/logo/mnemos-simbolo.png" alt=""><div class="fin"><span class="est">En proceso</span><span class="precio-t">550 €</span></div></li>
-        <li><span class="num">V</span><img class="simbolo" src="assets/logo/mnemos-simbolo.png" alt=""><div class="fin"><span class="est">En proceso</span><span class="precio-t">650 €</span></div></li>
-        <li><span class="num">VI</span><img class="simbolo" src="assets/logo/mnemos-simbolo.png" alt=""><div class="fin"><span class="est">En proceso</span><span class="precio-t">750 €</span></div></li>
-        <li><span class="num">VII</span><img class="simbolo" src="assets/logo/mnemos-simbolo.png" alt=""><div class="fin"><span class="est">En proceso</span><span class="precio-t">850 €</span></div></li>
-        <li><span class="num">VIII</span><img class="simbolo" src="assets/logo/mnemos-simbolo.png" alt=""><div class="fin"><span class="est">En proceso</span><span class="precio-t">950 €</span></div></li>
-        <li><span class="num">IX</span><img class="simbolo" src="assets/logo/mnemos-simbolo.png" alt=""><div class="fin"><span class="est">En proceso</span><span class="precio-t">1050 €</span></div></li>
-        <li><span class="num">X</span><img class="simbolo" src="assets/logo/mnemos-simbolo.png" alt=""><div class="fin"><span class="est">En proceso</span><span class="precio-t">1150 €</span></div></li>
-        <li><span class="num">XI</span><img class="simbolo" src="assets/logo/mnemos-simbolo.png" alt=""><div class="fin"><span class="est">En proceso</span><span class="precio-t">1250 €</span></div></li>
-        <li><span class="num">XII</span><img class="simbolo" src="assets/logo/mnemos-simbolo.png" alt=""><div class="fin"><span class="est">En proceso</span><span class="precio-t">1350 €</span></div></li>
+        <li><span class="num">IV</span><img class="simbolo" src="assets/logo/mnemos-simbolo.png" alt=""><div class="fin"><span class="est">En proceso</span><span class="precio-t">3.000 €</span></div></li>
+        <li><span class="num">V</span><img class="simbolo" src="assets/logo/mnemos-simbolo.png" alt=""><div class="fin"><span class="est">En proceso</span><span class="precio-t">3.600 €</span></div></li>
+        <li><span class="num">VI</span><img class="simbolo" src="assets/logo/mnemos-simbolo.png" alt=""><div class="fin"><span class="est">En proceso</span><span class="precio-t">4.200 €</span></div></li>
+        <li><span class="num">VII</span><img class="simbolo" src="assets/logo/mnemos-simbolo.png" alt=""><div class="fin"><span class="est">En proceso</span><span class="precio-t">4.800 €</span></div></li>
+        <li><span class="num">VIII</span><img class="simbolo" src="assets/logo/mnemos-simbolo.png" alt=""><div class="fin"><span class="est">En proceso</span><span class="precio-t">5.400 €</span></div></li>
+        <li><span class="num">IX</span><img class="simbolo" src="assets/logo/mnemos-simbolo.png" alt=""><div class="fin"><span class="est">En proceso</span><span class="precio-t">6.000 €</span></div></li>
+        <li><span class="num">X</span><img class="simbolo" src="assets/logo/mnemos-simbolo.png" alt=""><div class="fin"><span class="est">En proceso</span><span class="precio-t">6.600 €</span></div></li>
+        <li><span class="num">XI</span><img class="simbolo" src="assets/logo/mnemos-simbolo.png" alt=""><div class="fin"><span class="est">En proceso</span><span class="precio-t">7.200 €</span></div></li>
+        <li><span class="num">XII</span><img class="simbolo" src="assets/logo/mnemos-simbolo.png" alt=""><div class="fin"><span class="est">En proceso</span><span class="precio-t">7.800 €</span></div></li>
       </ul>
       <div class="taller-pie">
         <a class="btn btn-gh" href="#lista">Quiero que me avisen</a>
-        <p>Las obras se anuncian primero a la lista de coleccionistas, y la primera persona que las ve puede quedárselas. Ahí es donde se venden.</p>
+        <p>Las obras se anuncian primero a la lista de coleccionistas, y la primera persona que las ve puede quedárselas.</p>
       </div>
     </div>
 
@@ -149,7 +149,7 @@
       <div>
         <div class="kicker">Lista de coleccionistas</div>
         <h3 style="margin-top:12px">Recibe cada obra antes de que se publique</h3>
-        <p style="color:var(--gris);font-size:.94rem;margin-top:10px">Las piezas se anuncian primero a la lista. La mayoría se vende en esas primeras horas.</p>
+        <p style="color:var(--gris);font-size:.94rem;margin-top:10px">Las piezas se anuncian primero a la lista, antes de salir en la web. Quien la ve antes, puede quedársela.</p>
       </div>
       <form class="form-n" action="https://formsubmit.co/david@neolabs.me" method="POST">
         <input type="hidden" name="_subject" value="MNEMOS - nuevo suscriptor a la lista">
@@ -180,7 +180,7 @@
     <div class="ap">
       <div class="kicker">El artista</div>
       <h3 style="margin:16px 0 18px;font-size:1.5rem">David Ortiz</h3>
-      <p class="lead">Trabajo en inteligencia artificial. Diseño sistemas que deciden, y a la vez veo todos los días el hueco entre lo que esas máquinas hacen y lo que nosotros creemos que hacen. Este museo es mi manera de pensar eso despacio.</p>
+      <p class="lead">Trabajo cada cuadro capa a capa, durante meses, hasta que queda tal y como lo tengo en la cabeza. No sale de un golpe: se levanta, se rompe y se vuelve a levantar tantas veces como haga falta. Lo que ves en estas obras es tiempo, decisiones y oficio.</p>
       <p style='margin-top:24px'><a href='artista.html' style='color:var(--naranja);text-decoration:none;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem'>Conocer al artista &rarr;</a></p>
       <p class="art-cita">«Cada obra es un pensamiento que me recorre la mente durante meses hasta que lo plasmo en una obra de arte. Cada cuadro es un trozo de vida dedicada a estudiar, analizar, construir e iterar hasta conseguir algo único.»</p>
       <img class="firma-img" src="assets/logo/firma-negra.png" alt="Firma de David Ortiz">
@@ -208,7 +208,7 @@
       <div class="paso">
         <div class="n">03</div>
         <h3>La firma</h3>
-        <p>Se imprime en papel fine art de archivo 200 g/m² (giclée de 12 tintas), se firma a mano en el margen y se numera. A partir de ahí no se imprime ninguna copia más.</p>
+        <p>Se imprime en papel fine art de archivo 200 g/m² (giclée de 12 tintas), lleva la firma del artista en el margen, y el certificado va numerado y con su código QR. A partir de ahí no se imprime ninguna copia más.</p>
       </div>
     </div>
   </div>
